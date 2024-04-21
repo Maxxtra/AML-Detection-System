@@ -17,7 +17,11 @@ Regarding adapting the model to data from a single bank with more client-specifi
 We also considered implementing a graph neural network. However, from our review of "Provably Powerful Graph Neural Networks for Directed Multigraphs"[3], we found that the model's performance was heavily dependent on complexity, which we couldn't implement due to time constraints. Furthermore, such a model wouldn't be suitable for a single-bank dataset since the edges in graph neural networks[4] connect accounts where money is transferred, and accounts in other banks wouldn't have corresponding nodes. Additionally, edge connections in a graph neural network would require nodes that might not exist in a single-bank dataset.
 
 Bibliography:
+
 [1] Variational Autoencoders and Wasserstein Generative Adversarial Networks for Improving the Anti-Money Laundering Process: ZhiYuan Chen1,ZhiYuan Chen1, Member, IEEE, Waleed Soliman1, Amril Nazir2, and Mohammad Shorfuzzaman3, Member, IEEE: https://www.researchgate.net/publication/352142543_Variational_Autoencoders_and_Wasserstein_Generative_Adversarial_Networks_for_Improving_the_Anti-Money_Laundering_Process
+
 [2] IBM Transactions for Anti Money Laundering (AML): https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml
+
 [3] Provably Powerful Graph Neural Networks for Directed Multigraphs: Béni Egressy, Luc von Niederhäusern, Jovan Blanuša, Erik Altman, Roger Wattenhofer, Kubilay Atasu2: https://arxiv.org/pdf/2306.11586.pdf
+
 [4] Multi-GNN: https://github.com/IBM/Multi-GNN/blob/main/models.py
