@@ -16,6 +16,34 @@ Regarding adapting the model to data from a single bank with more client-specifi
 
 We also considered implementing a graph neural network. However, from our review of "Provably Powerful Graph Neural Networks for Directed Multigraphs"[3], we found that the model's performance was heavily dependent on complexity, which we couldn't implement due to time constraints. Furthermore, such a model wouldn't be suitable for a single-bank dataset since the edges in graph neural networks[4] connect accounts where money is transferred, and accounts in other banks wouldn't have corresponding nodes. Additionally, edge connections in a graph neural network would require nodes that might not exist in a single-bank dataset.
 
+
+For metrics, we tested on two datasets:
+
+1. ### Small_AML_ChallangeHB2.csv
+
+* prediction time is: 4s
+* accuracy = 0.974
+* precison = 0.006
+* recal = (0.140
+* f1_score = 0.011
+* AUC = 0.405
+* ROC Curve: ![image](https://github.com/Maxxtra/AML-Detection-System/assets/83414814/e12ef937-68f9-4cd3-9b83-d6fe3ac585a6)
+
+* Confusion Matrix: ![image](https://github.com/Maxxtra/AML-Detection-System/assets/83414814/5a2fb7af-b491-478e-a04a-3fc87dde40f7)
+
+2. ## AML_ChallangeHB2.csv
+   
+* prediction time: 380s
+* acc = 0.873
+* prec = 0.005
+* recal = 0.230
+* f1 = 0.009
+* AUC = 0.444
+* ROC Curve: ![image](https://github.com/Maxxtra/AML-Detection-System/assets/83414814/9070efbf-a6b1-4bd1-b803-460cf47565c9)
+
+* Confusion Matrix: ![image](https://github.com/Maxxtra/AML-Detection-System/assets/83414814/8a4e6fb9-4650-468c-a183-db4c62efc27e)
+
+
 Bibliography:
 
 [1] Variational Autoencoders and Wasserstein Generative Adversarial Networks for Improving the Anti-Money Laundering Process: ZhiYuan Chen1,ZhiYuan Chen1, Member, IEEE, Waleed Soliman1, Amril Nazir2, and Mohammad Shorfuzzaman3, Member, IEEE: https://www.researchgate.net/publication/352142543_Variational_Autoencoders_and_Wasserstein_Generative_Adversarial_Networks_for_Improving_the_Anti-Money_Laundering_Process
